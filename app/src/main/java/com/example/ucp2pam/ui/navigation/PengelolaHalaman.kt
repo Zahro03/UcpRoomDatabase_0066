@@ -98,5 +98,16 @@ fun PengelolaHalaman(
                 modifier = modifier
             )
         }
+
+        composable(
+            route = DestinasiSuplierInsert.route
+        ){
+            InsertSplView(
+                onBack = {
+                    navController.popBackStack()
+                },
+                modifier = modifier
+            )
+        }
     }
 }
