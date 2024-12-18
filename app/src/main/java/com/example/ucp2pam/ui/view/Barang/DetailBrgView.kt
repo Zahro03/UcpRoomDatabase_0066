@@ -9,6 +9,8 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material3.Button
+import androidx.compose.material3.Card
+import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
@@ -141,5 +143,42 @@ fun ItemDetailBrg(
     modifier: Modifier = Modifier,
     barang: Barang
 ){
+    Card(
+        modifier = modifier.fillMaxWidth(),
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.primaryContainer,
+            contentColor = MaterialTheme.colorScheme.primaryContainer
+        )
+    ) {
+        Column(
+            modifier = Modifier.padding(16.dp)
+        ) {
+            ComponentDetailBrg(judul = "ID", isinya = barang.id.toString())
+            Spacer(modifier = Modifier.padding(4.dp))
+
+            ComponentDetailBrg(judul = "Nama", isinya = barang.nama)
+            Spacer(modifier = Modifier.padding(4.dp))
+
+            ComponentDetailBrg(judul = "Deskripsi", isinya = barang.deskripsi)
+            Spacer(modifier = Modifier.padding(4.dp))
+
+            ComponentDetailBrg(judul = "Harga", isinya = barang.harga.toString())
+            Spacer(modifier = Modifier.padding(4.dp))
+
+            ComponentDetailBrg(judul = "Stok", isinya = barang.stok.toString())
+            Spacer(modifier = Modifier.padding(4.dp))
+
+            ComponentDetailBrg(judul = "Nama Suplier", isinya = barang.namaSuplier)
+        }
+    }
+}
+
+@Composable
+fun ComponentDetailBrg(
+    modifier: Modifier = Modifier,
+    judul: String,
+    isinya: String,
+){
 
 }
+
