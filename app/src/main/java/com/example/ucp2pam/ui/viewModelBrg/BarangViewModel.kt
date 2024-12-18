@@ -66,7 +66,7 @@ fun BarangEvent.toBarangEntity(): Barang = Barang(
     nama = nama,
     deskripsi = deskripsi,
     harga = harga,
-    stok = stok,
+    stok = stok ,
     namaSuplier = namaSuplier
 )
 
