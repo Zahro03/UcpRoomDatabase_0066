@@ -53,7 +53,21 @@ fun PengelolaHalaman(
                 }
             )
         ){
-
+            val id = it.arguments?.getInt(DestinasiDetail.ID)
+            id?.let { id ->
+                DetailBarangView(
+                    onBack = {
+                        navController.popBackStack()
+                    },
+                    onEditClick = {
+                        navController.navigate("${DestinasiUpdate.route}/$id")
+                    },
+                    onDeleteClick = {
+                        navController.popBackStack()
+                    },
+                    modifier = modifier
+                )
+            }
         }
         composable(
             DestinasiUpdate.routesWithArg,
@@ -71,6 +85,18 @@ fun PengelolaHalaman(
                     navController.popBackStack()
                 },
                 modifier = modifier,
+            )
+        }
+
+        composable(
+            route = DestinasiSuplierHome.route
+        ){
+            HomeSplView(
+                onAddSuplier = {
+                    navController.navigate(DestinasiSuplierInsert.route)
+                },
+                modifier = modifier
+            )
         }
     }
 }
