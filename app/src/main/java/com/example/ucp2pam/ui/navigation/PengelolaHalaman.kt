@@ -46,6 +46,16 @@ fun PengelolaHalaman(
         }
 
         composable(
+            route = DestinasiDetail.routesWithArg,
+            arguments = listOf(
+                navArgument(DestinasiDetail.ID){
+                    type = NavType.IntType
+                }
+            )
+        ){
+
+        }
+        composable(
             DestinasiUpdate.routesWithArg,
             arguments = listOf(
                 navArgument(DestinasiUpdate.ID) {
