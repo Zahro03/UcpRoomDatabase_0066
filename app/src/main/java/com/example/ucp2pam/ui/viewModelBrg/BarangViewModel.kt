@@ -18,17 +18,15 @@ class BarangViewModel(private val repositoryBarang: RepositoryBrg) : ViewModel()
       )
   }
     // Validasi data input pengguna
-    private fun validateFields(): Boolean {
+    private fun validateFields(): Boolean{
         val event = uiState.barangEvent
         val errorState = FormErrorState(
             nama = if (event.nama.isNotEmpty()) null else "Nama tidak boleh kosong",
             deskripsi = if (event.deskripsi.isNotEmpty()) null else "Deskripsi tidak boleh kosong",
-            harga = if (event.harga > 0) null else "Harga harus lebih dari 0",
-            stok = if (event.stok >= 0) null else "Stok tidak boleh negatif",
-            namaSuplier = if (event.namaSuplier.isNotEmpty()) null else "Nama Supplier tidak boleh kosong"
+            harga = if (event.harga > 0) null else "Stok tidak boleh negatif",
+            stok = if (event.stok >= 0) null else "Stok tidak boleh kosong",
+            namaSuplier = if (event.namaSuplier.isNotEmpty()) null else "Nama Suplier tidak boleh kosong"
         )
-        uiState = uiState.copy(isEntryValid = errorState)
-        return errorState.isValid()
     }
 
     // Menyimpan data ke repository
