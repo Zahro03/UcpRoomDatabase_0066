@@ -23,12 +23,23 @@ fun PengelolaHalaman(
             HomeBrgView(
                 onDetailClick = { id ->
                     navController.navigate("${DestinasiDetail.route}/$id")
-                    println(
-                        "PengelolaHalaman: id = $id"
-                    )
                 },
                 onAddBrg = {
                     navController.navigate(DestinasiUpdate.route)
+                },
+                modifier = modifier
+            )
+        }
+
+        composable(
+            route = DestinasiInsert.route
+        ){
+            InsertBrgView(
+                onBack = {
+                    navController.popBackStack()
+                },
+                onNavigate = {
+                    navController.popBackStack()
                 },
                 modifier = modifier
             )
