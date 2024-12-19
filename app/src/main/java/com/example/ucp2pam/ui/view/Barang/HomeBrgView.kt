@@ -3,6 +3,7 @@
 package com.example.ucp2pam.ui.view.Barang
 
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -165,5 +166,9 @@ fun CardBarang(
         modifier = modifier
             .fillMaxWidth()
             .padding(8.dp)
-    )
+    ){
+        Column(
+            modifier = Modifier.padding(8.dp),
+        )
+    }
 }
