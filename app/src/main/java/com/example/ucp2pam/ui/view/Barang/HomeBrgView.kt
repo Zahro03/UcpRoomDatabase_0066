@@ -181,7 +181,15 @@ fun CardBarang(
                 Spacer(modifier = Modifier.padding(4.dp))
                 Text(
                     text = barang.deskripsi,
+                    fontSize = 16.sp
                 )
+            }
+
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically
+            ){
+
             }
         }
     }
