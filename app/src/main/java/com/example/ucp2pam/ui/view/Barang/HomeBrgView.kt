@@ -143,7 +143,8 @@ fun ListBarang(
             items = listBrg,
             itemContent = { barang ->
                 CardBarang(
-                    barang = barang
+                    barang = barang,
+                    onClick = { onClick(barang.id)}
                 )
             }
         )
