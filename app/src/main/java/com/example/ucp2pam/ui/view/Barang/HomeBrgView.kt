@@ -114,5 +114,15 @@ fun BodyHomeBrgView(
                 )
             }
         }
+
+        else -> {
+            ListBarang(
+                listBrg = homeUiState.listBrg,
+                onClick = {
+                    onClick(it)
+                },
+                modifier = modifier
+            )
+        }
     }
 }
