@@ -155,4 +155,8 @@ fun ListBarang(
 @Composable
 fun CardBarang(
     barang: Barang,
-)
+    modifier: Modifier = Modifier,
+    onClick: (String) -> Unit = {}
+){
+
+}
