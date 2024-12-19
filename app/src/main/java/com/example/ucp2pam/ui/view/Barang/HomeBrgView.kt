@@ -5,6 +5,7 @@ package com.example.ucp2pam.ui.view.Barang
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material3.CircularProgressIndicator
@@ -27,6 +28,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.example.ucp2pam.data.entity.Barang
 import com.example.ucp2pam.ui.viewModel.Barang.HomeBrgViewModel
 import com.example.ucp2pam.ui.viewModel.Barang.HomeUiState
 import kotlinx.coroutines.launch
@@ -124,5 +126,18 @@ fun BodyHomeBrgView(
                 modifier = modifier
             )
         }
+    }
+}
+
+@Composable
+fun ListBarang(
+    listBrg: List<Barang>,
+    modifier: Modifier = Modifier,
+    onClick: (String) -> Unit = {}
+){
+    LazyColumn (
+        modifier = modifier
+    ){
+
     }
 }
