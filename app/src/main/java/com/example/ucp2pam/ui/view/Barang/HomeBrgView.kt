@@ -150,3 +150,9 @@ fun ListBarang(
         )
     }
 }
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun CardBarang(
+    barang: Barang,
+)
