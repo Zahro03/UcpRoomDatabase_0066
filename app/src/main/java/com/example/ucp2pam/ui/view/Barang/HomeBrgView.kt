@@ -141,6 +141,11 @@ fun ListBarang(
     ){
         items(
             items = listBrg,
+            itemContent = { barang ->
+                CardBarang(
+                    barang = barang
+                )
+            }
         )
     }
 }
