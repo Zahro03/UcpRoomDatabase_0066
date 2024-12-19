@@ -16,6 +16,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.SnackbarHostState
 import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
@@ -25,6 +26,7 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.ucp2pam.ui.viewModel.Barang.HomeBrgViewModel
 import com.example.ucp2pam.ui.viewModel.Barang.HomeUiState
+import kotlinx.coroutines.launch
 
 @Composable
 fun HomeBrgView(
@@ -83,6 +85,16 @@ fun BodyHomeBrgView(
                 contentAlignment = Alignment.Center
             ){
                 CircularProgressIndicator()
+            }
+        }
+
+        homeUiState.isError -> {
+            LaunchedEffect(homeUiState.errorMessage){
+                homeUiState.errorMessage?.let{message ->
+                    coroutineScope.launch {
+                        snackbarHostState.showSnackbar(message)
+                    }
+                }
             }
         }
     }
