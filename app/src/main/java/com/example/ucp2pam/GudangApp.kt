@@ -11,3 +11,4 @@ class GudangApp : Application() {
         containerApp = ContainerApp(this)
     }
 }
+}
