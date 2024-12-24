@@ -1,0 +1,11 @@
+![Home Page](https://github.com/user-attachments/assets/7e9374cd-9b88-495f-8185-685550742ff2)
+![Data Barang](https://github.com/user-attachments/assets/4dc0ae1c-13b3-4ff6-803e-151c409397da)
+![Tambah Barang](https://github.com/user-attachments/assets/bce49d1e-37d1-4a52-a918-470608761b15)
+![Detail Data Barang](https://github.com/user-attachments/assets/8a1142e1-f8a1-4a28-985b-1ab701045305)
+![Edit Barang](https://github.com/user-attachments/assets/39458185-6864-47d3-8800-ac440dac11cc)
+![Tampilan ketika sudah diupdate](https://github.com/user-attachments/assets/fa3b1a24-4744-41db-8682-b9b63f70f4e8)
+![Konfirmasi Delete data barang](https://github.com/user-attachments/assets/a82ef0d5-3f69-450c-a6c7-db6bfc265242)
+![Data Supplier](https://github.com/user-attachments/assets/23d44dc8-8bd3-41be-89d6-e949d991cd27)
+![Tambah Supplier](https://github.com/user-attachments/assets/48f53931-e88d-4371-b2b8-2a0e0681f28f)
+![Dropdown Supplier](https://github.com/user-attachments/assets/df277d65-b9b1-429d-a97f-96f33aebdf95)
+
