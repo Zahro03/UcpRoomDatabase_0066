@@ -18,5 +18,4 @@ interface SuplierDao {
 
     @Query("SELECT nama FROM tblSupplier")
     fun getSpl(id: String): Flow<List<String>>
-
 }
