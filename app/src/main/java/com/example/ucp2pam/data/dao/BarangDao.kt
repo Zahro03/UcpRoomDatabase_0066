@@ -1,11 +1,7 @@
 package com.example.ucp2pam.data.dao
 
-import androidx.room.Dao
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
-import androidx.room.Update
-import com.example.ucp2pam.data.entity.Barang
+import androidx.room.*
+import com.example.ucp2pam.data.model.Barang
 import kotlinx.coroutines.flow.Flow
 
 @Dao
@@ -13,19 +9,15 @@ interface BarangDao {
     @Insert
     suspend fun insertBarang(barang: Barang)
 
-    //getAllBarang
-    @Query("SELECT * FROM barang ORDER BY nama ASC")
+    @Update
+    suspend fun updateBarang(barang: Barang)
+
+    @Delete
+    suspend fun deleteBarang(barang: Barang)
+
+    @Query("SELECT * FROM tblBarang ORDER BY namaBarang")
     fun getAllBarang(): Flow<List<Barang>>
 
-    //getBarang
-    @Query("SELECT * FROM barang WHERE id = :id")
-    fun getBarang(id: String) : Flow<Barang>
-
-    //deleteMahasiswa
-    @Delete
-    suspend fun deleteMahasiswa(mahasiswa: Mahasiswa)
-
-    //updateMahasiswa
-    @Update
-    suspend fun updateMahasiswa(mahasiswa: Mahasiswa)
+    @Query("SELECT * FROM tblBarang WHERE id = :id")
+    fun getBarang(id: String): Flow<Barang>
 }
