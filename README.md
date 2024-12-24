@@ -6,5 +6,6 @@
 ![Edit Barang](https://github.com/user-attachments/assets/3dff19f9-9e99-4956-9909-00f51d85bd21)
 ![Data Supplier](https://github.com/user-attachments/assets/4c7e9552-46b9-4a97-be1d-48c54340ca2f)
 ![Tambah Supplier](https://github.com/user-attachments/assets/cbd5f3cc-d047-4b87-b1ca-d8cddfbec649)
-![Uploading Dropdown Supplier.png…]()
+![Dropdown Supplier](https://github.com/user-attachments/assets/f72a1ec7-61ff-48be-92d5-c2d6cddbc032)
+
 
